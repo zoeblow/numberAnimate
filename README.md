@@ -9,7 +9,7 @@ numberAnimate 是一款数据滚动组件，我是站在巨人的肩膀上进行
 
 ![numberAnimate-preview](https://raw.githubusercontent.com/zoeblow/numberAnimate/master/numberAnimate.gif)
 
-###版本
+### 版本
 > * V 1.0
 > * 修改时间 ：2016-09-18 16:58
 > * 描述：V 1.0 首次提交，之前已经对页面，井进行过若干次修改。
@@ -17,7 +17,7 @@ numberAnimate 是一款数据滚动组件，我是站在巨人的肩膀上进行
  
 -----
 
-###调用方式
+### 调用方式
 在html中引入jquery之后引入numberAnimate.js
 完成之后即可直接使用
 ```html
@@ -31,15 +31,15 @@ numberAnimate 是一款数据滚动组件，我是站在巨人的肩膀上进行
 ```
 -----
 
-###参数
+### 参数
 numberAnimate({num:'15342.10', pst:"%", dot:2, speed:2000, symbol:","})
 
 | 参数    | 取值类型   |  默认值  | 描述|
-| :----:  | :----:  | :----:  | :----:  |
+| :----:  | :----:  | :----:  | :----  |
 | num   | String/Number |   必填项     | 需要滚动的数字  |
 | speed    | Number |   1000 |   滚动的时间默认为一秒 |
-| symbol    | String |   空 |   是否存在千位分隔符，可输入任意字符 |
+| symbol    | String |   - |   是否存在千位分隔符，可输入任意字符 |
 | dot    | Number |   0 |   是否保留小数默认为0位小数(也就是分没有) |
-| pst    | String |  空 |   是否有百分号默认为空 |
+| pst    | String |  - |   是否有百分号默认为空 |
 
 -----

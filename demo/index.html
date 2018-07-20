@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>数字滚动插件</title>
-        <link rel="stylesheet" type="text/css" href="../dest/style/numberAnimate.css" />
+        <link rel="stylesheet" type="text/css" href="../dist/style/numberAnimate.css" />
     </head>
     <body>
     有分隔符，有小数点：<div class="numberRun1"></div> <br><br>
@@ -13,7 +13,7 @@
     有小数点, 有百分号：<div class="numberRun5"></div>
     </body>
     <script src="http://cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
-    <script type="text/javascript" src="../dest/script/numberAnimate.js"></script>
+    <script type="text/javascript" src="../dist/script/numberAnimate.js"></script>
     <script type="text/javascript">
     $(function(){
         //初始化
@@ -49,6 +49,8 @@
         var nums5 = 42.21;
         setInterval(function(){
             nums5+= 2.55;
+            console.log(nums5)
+            console.log(numRun5)
             numRun5.resetData(nums5);
         },2500);
   
