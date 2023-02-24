@@ -19,7 +19,6 @@
     };
     //如果setting为空，就取default的值
     var setting = $.extend(defaults, setting);
-
     //如果对象有多个，提示出错
     if ($(this).length > 1) {
       alert("just only one obj!");

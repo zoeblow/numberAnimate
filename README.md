@@ -8,7 +8,7 @@ numberAnimate 是一款数据滚动组件，我是站在巨人的肩膀上进行
 
 #### 作者 [@zoeblow](https://github.com/zoeblow)
 
-#### Demo [在线 Demo](http://ifuyuan.wang/gitdemo/numberAnimate/index.html)
+#### Demo [在线 Demo](https://zoeblow.github.io/numberAnimate/)
 
 ## 效果
 
