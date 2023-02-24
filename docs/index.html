@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>数字滚动插件</title>
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../dist/style/numberAnimate.css"
+    />
+    <style>
+      :root {
+        --theme-color: #4481eb;
+      }
+      * {
+        padding: 0;
+        margin: 0;
+        -webkit-font-smoothing: antialiased;
+        -webkit-overflow-scrolling: touch;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        -webkit-text-size-adjust: none;
+        -webkit-touch-callout: none;
+        box-sizing: border-box;
+      }
+      a {
+        text-decoration: none;
+      }
+      .github-corner {
+        border-bottom: 0;
+        position: fixed;
+        right: 0;
+        text-decoration: none;
+        top: 0;
+        z-index: 1;
+      }
+      .github-corner svg {
+        color: #fff;
+        fill: #42b983;
+        fill: var(--theme-color, #42b983);
+        height: 80px;
+        width: 80px;
+      }
+      .markdown-body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+          Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+        font-size: 16px;
+        line-height: 1.5;
+        word-wrap: break-word;
+        margin-left: auto;
+        max-width: 800px;
+        margin-right: auto;
+      }
+      .markdown-body h2::before {
+        content: "#";
+        color: var(--theme-color, #42b983);
+        font-size: 36px;
+        display: inline-block;
+        padding-right: 10px;
+        margin-left: -30px;
+      }
+      .markdown-body img.code {
+        width: 800px;
+      }
+      .markdown-body table {
+        display: block;
+        width: 800px;
+        width: max-content;
+        max-width: 100%;
+        overflow: auto;
+      }
+      .markdown-body table tr {
+        background-color: #fff;
+        border-top: 1px solid hsla(210, 18%, 87%, 1);
+      }
+      .markdown-body table th {
+        font-size: 1.1em;
+      }
+      .markdown-body table td,
+      .markdown-body table th {
+        padding: 6px 13px;
+        border: 1px solid #d0d7de;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a
+      href="https://github.com/zoeblow/numberAnimate"
+      target="_blank"
+      class="github-corner"
+      aria-label="View source on Github"
+      ><svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path
+          d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+          fill="currentColor"
+          style="transform-origin: 130px 106px"
+          class="octo-arm"
+        ></path>
+        <path
+          d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+          fill="currentColor"
+          class="octo-body"
+        ></path></svg
+    ></a>
+    <div class="markdown-body">
+      <h1 style="text-align: center; font-size: 47px; margin-top: 26px">
+        <span
+          >numberAnimate
+          <sup style="font-size: 16px; font-weight: normal">v1.1</sup></span
+        >
+        <a href="https://github.com/zoeblow/numberAnimate" target="_blank">
+          <img
+            src="https://img.shields.io/github/stars/zoeblow/numberAnimate?color=yellow&amp;logo=github&amp;style=flat-square"
+          />
+        </a>
+      </h1>
+
+      <br />
+      <p>
+        numberAnimate
+        是一款数据滚动组件，我是站在巨人的肩膀上进行制作，提高页面美观性
+        ，使页面更加绚丽。
+      </p>
+      <br />
+      <h2>用法 Use</h2>
+      <br />
+      <img class="code" src="./code.svg" alt="" />
+      <br />
+      <br />
+      <h2>参数 API</h2>
+      <br />
+      <table cellspacing="0" border="1">
+        <thead>
+          <tr>
+            <th align="center">参数</th>
+            <th align="center">取值类型</th>
+            <th align="center">默认值</th>
+            <th align="left">描述</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">num</td>
+            <td align="center">String/Number</td>
+            <td align="center">必填项</td>
+            <td align="left">需要滚动的数字</td>
+          </tr>
+          <tr>
+            <td align="center">speed</td>
+            <td align="center">Number</td>
+            <td align="center">1000</td>
+            <td align="left">滚动的时间默认为一秒</td>
+          </tr>
+          <tr>
+            <td align="center">symbol</td>
+            <td align="center">String</td>
+            <td align="center">-</td>
+            <td align="left">是否存在千位分隔符，可输入任意字符</td>
+          </tr>
+          <tr>
+            <td align="center">dot</td>
+            <td align="center">Number</td>
+            <td align="center">0</td>
+            <td align="left">是否保留小数默认为0位小数(也就是分没有)</td>
+          </tr>
+          <tr>
+            <td align="center">pst</td>
+            <td align="center">String</td>
+            <td align="center">-</td>
+            <td align="left">是否有百分号默认为空</td>
+          </tr>
+        </tbody>
+      </table>
+      <br /><br />
+      <h2>用例 DEMO</h2>
+      <br />
+      <br />
+
+      有分隔符，有小数点：
+      <div class="numberRun1"></div>
+      <br /><br />
+      只有分隔符：
+      <div class="numberRun2"></div>
+      <br /><br />
+      只有小数点：
+      <div class="numberRun3"></div>
+      <br /><br />
+      无分隔符，无小数点：
+      <div class="numberRun4"></div>
+      <br /><br />
+      有小数点, 有百分号：
+      <div class="numberRun5"></div>
+      <br /><br />
+      累加错位：
+      <div class="numberRun6"></div>
+    </div>
+    <br /><br />
+  </body>
+  <script src="http://cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript" src="../dist/script/numberAnimate.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      //初始化
+      var numRun1 = $(".numberRun1").numberAnimate({
+        num: 15342.1,
+        dot: 2,
+        speed: 2000,
+        symbol: ",",
+      });
+      var numRun2 = $(".numberRun2").numberAnimate({
+        num: "52353434",
+        speed: 2000,
+        symbol: ",",
+      });
+      var numRun3 = $(".numberRun3").numberAnimate({
+        num: "523534.343",
+        dot: 3,
+        speed: 2000,
+      });
+      var numRun4 = $(".numberRun4").numberAnimate({
+        num: "1553434",
+        speed: 2000,
+      });
+      var numRun5 = $(".numberRun5").numberAnimate({
+        num: "42.21",
+        pst: "%",
+        dot: 2,
+        speed: 2000,
+        symbol: ",",
+      });
+      var numRun6 = $(".numberRun6").numberAnimate({
+        num: 1,
+        dot: 2,
+        speed: 500,
+      });
+
+      var nums1 = 15342.1;
+      setInterval(function () {
+        nums1 += 21.31;
+        numRun1.resetData(nums1);
+      }, 3000);
+      var nums2 = 52353434;
+      setInterval(function () {
+        nums2 += 3434;
+        numRun2.resetData(nums2);
+      }, 3800);
+
+      var nums3 = 523534.343;
+      setInterval(function () {
+        nums3 += 7454.521;
+        numRun3.resetData(nums3);
+      }, 4000);
+
+      var nums4 = 1553434;
+      setInterval(function () {
+        nums4 += 1254;
+        numRun4.resetData(nums4);
+      }, 3500);
+
+      var nums5 = 42.21;
+      setInterval(function () {
+        nums5 += 2.55;
+        console.log(nums5);
+        console.log(numRun5);
+        numRun5.resetData(nums5);
+      }, 2500);
+
+      var nums6 = 1;
+      setInterval(function () {
+        nums6 += 1;
+        // console.log(nums6)
+        // console.log(numRun6)
+        numRun6.resetData(nums6);
+      }, 1000);
+    });
+  </script>
+</html>
