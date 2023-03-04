@@ -1,0 +1,22 @@
+{
+  "name": "numberanimate",
+  "version": "1.1.0",
+  "description": "numberAnimate 是一款数据滚动组件，我是站在巨人的肩膀上进行制作，提高页面美观性 ，使页面更加绚丽。",
+  "main": "./dist/script/numberAnimate.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zoeblow/numberAnimate.git"
+  },
+  "author": "zoeblow",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zoeblow/numberAnimate/issues"
+  },
+  "homepage": "https://github.com/zoeblow/numberAnimate#readme"
+}
